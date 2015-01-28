@@ -165,7 +165,7 @@ module Textacular
   end
 
   def searchable_columns
-    columns.select {|column| [:string, :text].include? column.type }.map(&:name)
+    columns.select {|column| [:string, :text, :citext].include? column.type }.map(&:name)
   end
 
   def quoted_language
